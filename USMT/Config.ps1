@@ -1,6 +1,7 @@
 # Default configuration options - make edits here
 
 # Default domain to use for profile creation
+# For your use, update the 'DOMAIN' field with your company domain name
 $DefaultDomain = 'DOMAIN'
 
 # Default accounts to exclude from migration in the form of "Domain\UserName"
@@ -11,11 +12,11 @@ $DefaultExcludeProfile = @(
 
 # By default local accounts that don't exist on the new computer will not be created for security measures
 # To create these accounts set this to true
-$DefaultLACreate = $false
+$DefaultLACreate = $true
 
 # By default local accounts that are created from the previous option will be disabled for security measures
 # To enable these accounts set this to true
-$DefaultLACEnable = $false
+$DefaultLACEnable = $true
 
 # Default password for accounts created by previous two options
 $DefaultLAPassword = 'P@ssw0rd!'
@@ -27,14 +28,14 @@ $ValidIPAddress = '*'
 $MigrationStorePath = 'C:\TEMP\MigrationStore'
 
 # Default save remotely option
-$DefaultSaveRemotely = $true
+$DefaultSaveRemotely = $false
 
 # Default user profile items to exclude from migration, more info found here:
 # https://technet.microsoft.com/en-us/library/cc722303(v=ws.10).aspx
 $DefaultIncludeAppData = $true
-$DefaultIncludeLocalAppData = $false
+$DefaultIncludeLocalAppData = $true
 $DefaultIncludePrinters = $true
-$DefaultIncludeRecycleBin = $false
+$DefaultIncludeRecycleBin = $true
 $DefaultIncludeMyDocuments = $true
 $DefaultIncludeWallpapers = $true
 $DefaultIncludeDesktop = $true
@@ -76,7 +77,7 @@ $DefaultExcludeFiles = @()
 $DefaultSaveStateTaskCompleted = $true
 
 # Default recent profiles
-$DefaultRecentProfiles = $true
+$DefaultRecentProfiles = $false
 $DefaultRecentProfilesDays = 90
 
 # Get USMT binary path according to OS architecture. If you used the zip provided, unzip in the same directory as this script
